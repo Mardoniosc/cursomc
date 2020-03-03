@@ -8,10 +8,10 @@ Como executar a aplicação
 
 Certifique-se de ter o Git instalado.
 
-`git clone https://github.com/Mardoniosc/cursomc.git`
+:link:`git clone https://github.com/Mardoniosc/cursomc.git`
 
 `cd cursomc`
 
 `./mvnw spring-boot:run`
 
-API será executada em http://localhost:8080
+API será executada em :link: http://localhost:8080
