@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Mardoniosc/cursomc.svg?branch=master)](https://travis-ci.com/Mardoniosc/cursomc)
+
 ### cursomc
 
 API do sistema de ponto inteligente com Java e Spring Boot.
