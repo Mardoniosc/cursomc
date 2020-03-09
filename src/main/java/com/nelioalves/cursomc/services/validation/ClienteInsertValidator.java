@@ -28,6 +28,7 @@ public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert
 	public boolean isValid(ClienteNewDTO objDto, ConstraintValidatorContext context) {
 		List<FieldMessage> list = new ArrayList<>();
 		
+		
 		if(objDto.getTipo().equals(TipoCliente.PESSOAFISICA.getCod()) && !BR.validaCPF(objDto.getCpfOuCnpj())) {
 			list.add(new FieldMessage("cpfOuCnpj", "CPF inválido"));
 		}
@@ -37,9 +38,10 @@ public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert
 		}
 		
 		Cliente aux = repo.findByEmail(objDto.getEmail());
-		if(aux != null) {
-			list.add(new FieldMessage("E-mail", "E-mail já existente"));
+		if (aux != null) {
+			list.add(new FieldMessage("email", "Email já existente"));
 		}
+		
 		
 		// inclua os testes aqui, inserindo erros na lista
 		for (FieldMessage e : list) {
