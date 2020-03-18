@@ -40,6 +40,14 @@ public class ClienteResource {
 		return ResponseEntity.ok(obj);
 	}
 	
+	@GetMapping("/email")
+	public ResponseEntity<Cliente> find(@RequestParam String email) {
+		Cliente obj = service.findByEmail(email);
+		return ResponseEntity.ok(obj);
+	}
+	
+	
+	
 	@PostMapping
 	public ResponseEntity<Void> insert(@Valid @RequestBody ClienteNewDTO objDTO) {
 		Cliente obj = service.fromDTO(objDTO); 
